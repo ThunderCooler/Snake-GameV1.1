@@ -211,7 +211,6 @@ int main() {
                 if (BallCollide(Ball,Snake) || BallCollide(Ball2,Snake)) {
                     uniform_int_distribution<int> dist3(0,9);
                     chance = dist3(gen);
-                    cout << chance << endl;
                     if (BallCollide(Ball,Snake)) RandBall(Ball);
                     if (BallCollide(Ball2,Snake) && IsDrankPotion) RandBall(Ball2);
                     pointsCounter++;
@@ -230,7 +229,6 @@ int main() {
                         distanceFromBorder += 5.f;
                         if (distanceApart <= 50.f) distanceApart = 50.f;
                         if (distanceFromBorder >= 200.f) distanceFromBorder = 200.f;
-                        cout << Bomb.getPosition().x << " " << Bomb.getPosition().y << endl;
                         steps = 0;
                         Isbomb = true;
                     }
@@ -322,4 +320,5 @@ int main() {
                 points.setString(to_string(pointsCounter));
             }
     return 0;
+
 }
