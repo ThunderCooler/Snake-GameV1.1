@@ -19,8 +19,6 @@ std::filesystem::path resourcesDir()
 }
 }
 
-// this is a change
-
 std::random_device rd;
 std::mt19937 gen(rd());
 
